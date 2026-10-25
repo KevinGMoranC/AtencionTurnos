@@ -6,6 +6,7 @@ import edu.oficina.modelo.Cliente;
 import edu.oficina.modelo.Servicio;
 import edu.oficina.modelo.Turno;
 import edu.oficina.persistencia.ConexionBD;
+import edu.oficina.persistencia.InicializadorBD;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -20,7 +21,7 @@ public final class Main {
         ArbolBST arbol = new ArbolBST();
         ColaTurnos cola = new ColaTurnos();
 
-        System.out.println("AtencionTurnos - Primera entrega en desarrollo");
+        System.out.println("AtencionTurnos - Segunda entrega en desarrollo");
         System.out.println("Cliente de comprobación en memoria: " + cliente.getNombreCompleto());
         System.out.println("Servicio de comprobación en memoria: " + servicio.getNombre());
         System.out.println("BST inicialmente vacío: " + arbol.estaVacio());
@@ -28,10 +29,11 @@ public final class Main {
         System.out.println("Estados definidos: " + Arrays.toString(Turno.Estado.values()));
 
         try (Connection conexion = ConexionBD.obtenerConexion()) {
+            new InicializadorBD().inicializar();
             System.out.println("Conexión JDBC correcta: "
                     + conexion.getMetaData().getDatabaseProductName());
             System.out.println("Archivo relativo: data/turnos.db");
-            System.out.println("Esta etapa no crea tablas ni registra los datos de comprobación.");
+            System.out.println("Esquema y datos iniciales preparados; los objetos de comprobación no se insertan.");
         } catch (SQLException e) {
             System.err.println("No se pudo comprobar SQLite: " + e.getMessage());
             System.exit(1);

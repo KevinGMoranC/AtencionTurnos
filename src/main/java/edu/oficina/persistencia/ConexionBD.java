@@ -16,12 +16,18 @@ public final class ConexionBD {
 
     /** Quien llama debe cerrar la conexión, preferentemente con try-with-resources. */
     public static Connection obtenerConexion() throws SQLException {
+        return obtenerConexion(ARCHIVO);
+    }
+
+    /** Sobrecarga para pruebas o una ubicación explícita; conserva la ruta original por defecto. */
+    public static Connection obtenerConexion(Path archivo) throws SQLException {
+        java.util.Objects.requireNonNull(archivo, "El archivo es obligatorio.");
         try {
-            Files.createDirectories(ARCHIVO.getParent());
+            if (archivo.getParent() != null) Files.createDirectories(archivo.getParent());
         } catch (IOException e) {
             throw new SQLException("No se pudo crear la carpeta relativa data.", e);
         }
-        Connection conexion = DriverManager.getConnection("jdbc:sqlite:" + ARCHIVO);
+        Connection conexion = DriverManager.getConnection("jdbc:sqlite:" + archivo);
         try (Statement instruccion = conexion.createStatement()) {
             instruccion.execute("PRAGMA foreign_keys = ON");
         } catch (SQLException e) {

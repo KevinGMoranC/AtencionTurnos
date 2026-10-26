@@ -1,41 +1,36 @@
 package edu.oficina;
 
-import edu.oficina.estructuras.ArbolBST;
-import edu.oficina.estructuras.ColaTurnos;
-import edu.oficina.modelo.Cliente;
-import edu.oficina.modelo.Servicio;
-import edu.oficina.modelo.Turno;
-import edu.oficina.persistencia.ConexionBD;
+import edu.oficina.controlador.ControladorConsola;
+import edu.oficina.dao.ClienteDAO;
+import edu.oficina.dao.ServicioDAO;
+import edu.oficina.dao.TurnoDAO;
 import edu.oficina.persistencia.InicializadorBD;
-import java.sql.Connection;
+import edu.oficina.servicios.ClienteService;
+import edu.oficina.servicios.ServicioService;
+import edu.oficina.servicios.TurnoService;
+import edu.oficina.servicios.ConsultaService;
+import edu.oficina.vista.VistaConsola;
 import java.sql.SQLException;
-import java.util.Arrays;
 
-/** Ejecución mínima de comprobación; todavía no es el menú final. */
+/** Punto de entrada: inicializa SQLite, conecta las capas y abre el menú. */
 public final class Main {
-    private Main() {}
+    private Main() { }
 
     public static void main(String[] args) {
-        Cliente cliente = new Cliente(1001, "Ana López", "55501001", true);
-        Servicio servicio = new Servicio(1, "Información", true);
-        ArbolBST arbol = new ArbolBST();
-        ColaTurnos cola = new ColaTurnos();
-
-        System.out.println("AtencionTurnos - Segunda entrega en desarrollo");
-        System.out.println("Cliente de comprobación en memoria: " + cliente.getNombreCompleto());
-        System.out.println("Servicio de comprobación en memoria: " + servicio.getNombre());
-        System.out.println("BST inicialmente vacío: " + arbol.estaVacio());
-        System.out.println("Cola inicialmente vacía: " + cola.estaVacia());
-        System.out.println("Estados definidos: " + Arrays.toString(Turno.Estado.values()));
-
-        try (Connection conexion = ConexionBD.obtenerConexion()) {
+        try {
             new InicializadorBD().inicializar();
-            System.out.println("Conexión JDBC correcta: "
-                    + conexion.getMetaData().getDatabaseProductName());
-            System.out.println("Archivo relativo: data/turnos.db");
-            System.out.println("Esquema y datos iniciales preparados; los objetos de comprobación no se insertan.");
+            ClienteDAO clienteDAO = new ClienteDAO();
+            ServicioDAO servicioDAO = new ServicioDAO();
+            TurnoDAO turnoDAO = new TurnoDAO();
+            ClienteService clientes = new ClienteService(clienteDAO, turnoDAO);
+            ServicioService servicios = new ServicioService(servicioDAO, turnoDAO);
+            TurnoService turnos = new TurnoService(turnoDAO);
+            ConsultaService consultas = new ConsultaService(turnoDAO, clienteDAO);
+            try (VistaConsola vista = new VistaConsola(System.in, System.out)) {
+                new ControladorConsola(vista, clientes, servicios, turnos, consultas).ejecutar();
+            }
         } catch (SQLException e) {
-            System.err.println("No se pudo comprobar SQLite: " + e.getMessage());
+            System.err.println("No se pudo iniciar AtencionTurnos: " + e.getMessage());
             System.exit(1);
         }
     }

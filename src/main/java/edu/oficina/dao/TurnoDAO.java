@@ -1,6 +1,7 @@
 package edu.oficina.dao;
 
 import edu.oficina.modelo.Turno;
+import edu.oficina.reportes.ResumenServicio;
 import edu.oficina.persistencia.ConexionBD;
 import edu.oficina.persistencia.ProveedorConexion;
 import java.sql.*;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public final class TurnoDAO extends DaoBase implements TurnoRepositorio {
+public final class TurnoDAO extends DaoBase implements TurnoRepositorio, ConsultasTurnosRepositorio {
     public TurnoDAO() { this(ConexionBD::obtenerConexion); }
     public TurnoDAO(ProveedorConexion conexiones) { super(conexiones); }
 
@@ -120,5 +121,55 @@ public final class TurnoDAO extends DaoBase implements TurnoRepositorio {
                 c.rollback(); throw e;
             }
         }
+    }
+
+    public Turno buscar(long numero) throws SQLException {
+        if (numero <= 0) throw new IllegalArgumentException("El número debe ser positivo.");
+        try (Connection c = conexiones.abrir();
+             PreparedStatement s = c.prepareStatement("SELECT * FROM turnos WHERE numero=?")) {
+            s.setLong(1, numero);
+            try (ResultSet r = s.executeQuery()) { return r.next() ? leer(r) : null; }
+        }
+    }
+
+    public List<Turno> listarPorEstado(Turno.Estado estado) throws SQLException {
+        Objects.requireNonNull(estado, "El estado es obligatorio.");
+        List<Turno> resultado = new ArrayList<>();
+        try (Connection c = conexiones.abrir();
+             PreparedStatement s = c.prepareStatement("SELECT * FROM turnos WHERE estado=? ORDER BY numero")) {
+            s.setString(1, estado.name());
+            try (ResultSet r = s.executeQuery()) { while (r.next()) resultado.add(leer(r)); }
+        }
+        return resultado;
+    }
+
+    public List<Turno> historialCliente(int codigoCliente) throws SQLException {
+        if (codigoCliente <= 0) throw new IllegalArgumentException("El código debe ser positivo.");
+        List<Turno> resultado = new ArrayList<>();
+        try (Connection c = conexiones.abrir();
+             PreparedStatement s = c.prepareStatement("SELECT * FROM turnos WHERE codigo_cliente=? ORDER BY numero")) {
+            s.setInt(1, codigoCliente);
+            try (ResultSet r = s.executeQuery()) { while (r.next()) resultado.add(leer(r)); }
+        }
+        return resultado;
+    }
+
+    public List<ResumenServicio> resumenPorServicio() throws SQLException {
+        String sql = """
+                SELECT s.codigo, s.nombre,
+                    SUM(CASE WHEN t.estado='PENDIENTE' THEN 1 ELSE 0 END) AS pendientes,
+                    SUM(CASE WHEN t.estado='ATENDIDO' THEN 1 ELSE 0 END) AS atendidos,
+                    SUM(CASE WHEN t.estado='CANCELADO' THEN 1 ELSE 0 END) AS cancelados,
+                    COUNT(t.numero) AS total
+                FROM servicios s LEFT JOIN turnos t ON t.codigo_servicio=s.codigo
+                GROUP BY s.codigo, s.nombre ORDER BY s.codigo
+                """;
+        List<ResumenServicio> resultado = new ArrayList<>();
+        try (Connection c = conexiones.abrir(); PreparedStatement s = c.prepareStatement(sql);
+             ResultSet r = s.executeQuery()) {
+            while (r.next()) resultado.add(new ResumenServicio(r.getInt("codigo"), r.getString("nombre"),
+                    r.getLong("pendientes"), r.getLong("atendidos"), r.getLong("cancelados"), r.getLong("total")));
+        }
+        return resultado;
     }
 }

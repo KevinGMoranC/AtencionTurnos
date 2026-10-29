@@ -1,0 +1,10 @@
+OK: Recarga desde base omite finalizados e incorpora nuevos pendientes
+OK: FIFO reconstruido desde SQLite
+OK: Error de consulta conserva la cola anterior
+OK rechazo: Duplicado detectado durante reconstrucción
+OK: No se publica una cola construida a medias
+OK rechazo: La recarga rechaza un turno finalizado
+OK: Se conserva pendiente ante dato inválido
+OK: Recargas repetidas no duplican nodos
+OK: Recarga vacía no borra historial persistido
+RECARGA TURNOS DIA 4 CORRECTA

@@ -11,11 +11,11 @@ import java.util.Objects;
 /** Coordina persistencia y cola: nunca retira ni agrega antes de guardar correctamente. */
 public final class TurnoService {
     private final TurnoRepositorio repositorio;
-    private final ColaTurnos cola = new ColaTurnos();
+    private ColaTurnos cola = new ColaTurnos();
 
     public TurnoService(TurnoRepositorio repositorio) throws SQLException {
         this.repositorio = Objects.requireNonNull(repositorio);
-        for (Turno turno : repositorio.listarPendientes()) cola.encolar(turno);
+        recargarDesdePersistencia();
     }
 
     public Turno generar(int cliente, int servicio) throws SQLException {
@@ -27,6 +27,17 @@ public final class TurnoService {
         Turno turno = repositorio.crearPendiente(cliente, servicio);
         cola.encolar(turno);
         return turno;
+    }
+
+    /**
+     * Reconstruye pendientes en el orden por número que entrega el repositorio.
+     * Solo publica la nueva cola si toda la carga termina correctamente.
+     * No escribe estados ni ofrece sincronización automática entre aplicaciones.
+     */
+    public void recargarDesdePersistencia() throws SQLException {
+        ColaTurnos nueva = new ColaTurnos();
+        for (Turno turno : repositorio.listarPendientes()) nueva.encolar(turno);
+        cola = nueva;
     }
 
     public Turno consultarSiguiente() { return cola.consultarSiguiente(); }

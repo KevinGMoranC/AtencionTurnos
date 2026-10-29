@@ -1,0 +1,16 @@
+OK: Cancelar primero, último e intermedio conserva el orden
+OK: Atención después de cancelaciones
+OK: Cancelación del único pendiente deja extremos vacíos
+OK rechazo: Cancelar dos veces
+OK rechazo: Cancelar atendido
+OK rechazo: Número no positivo
+OK rechazo: Código de cliente no positivo
+OK rechazo: Código de servicio no positivo
+OK: Volver a encolar sin reutilizar números
+OK rechazo: Fallo al atender
+OK rechazo: Fallo al cancelar
+OK: Ni estado, fecha ni cola cambian si SQLite rechaza el cierre
+OK rechazo: Fallo al crear no publica un pendiente
+OK: Cola vacía después del fallo de creación
+OK: Los turnos persistidos mantienen numeración sin reutilización
+TURNOS DIA 4 CORRECTOS

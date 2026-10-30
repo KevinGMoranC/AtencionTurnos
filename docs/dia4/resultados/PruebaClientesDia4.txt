@@ -1,0 +1,28 @@
+OK: Código positivo mínimo/máximo y nombre con acento/apóstrofo
+OK rechazo: Código no positivo 0
+OK rechazo: Código no positivo -1
+OK rechazo: Código no positivo -2147483648
+OK rechazo: Nombre null
+OK rechazo: Nombre en blanco
+OK rechazo: Teléfono inválido: null
+OK rechazo: Teléfono inválido: 
+OK rechazo: Teléfono inválido: 1234567
+OK rechazo: Teléfono inválido: 123456789
+OK rechazo: Teléfono inválido: 12A45678
+OK rechazo: Teléfono inválido: +1234567
+OK rechazo: Teléfono inválido: １２３４５６７８
+OK rechazo: Teléfono inválido: ١٢٣٤٥٦٧٨
+OK rechazo: Teléfono inválido: 1234 678
+OK: Los registros inválidos no llegan a SQLite
+OK rechazo: Un código inactivo sigue siendo único
+OK: Actualizar datos no reactiva al cliente
+OK rechazo: Pendiente impide desactivar pero permite editar datos
+OK: Desactivación permitida tras cancelar
+OK: Desactivación permitida tras atender
+OK rechazo: Fallo real de guardado al cambiar estado
+OK: Estado anterior íntegro en BST y SQLite ante fallo
+OK rechazo: Actualizar inexistente
+OK rechazo: Cambiar estado de inexistente
+OK rechazo: Buscar código no positivo
+OK: La lista entregada al llamador no es la estructura ni elimina registros
+CLIENTES DIA 4 CORRECTOS

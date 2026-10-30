@@ -12,12 +12,12 @@ import java.util.Objects;
 public final class ClienteService {
     private final ClienteRepositorio repositorio;
     private final TurnoRepositorio turnos;
-    private final ArbolBST arbol = new ArbolBST();
+    private ArbolBST arbol = new ArbolBST();
 
     public ClienteService(ClienteRepositorio repositorio, TurnoRepositorio turnos) throws SQLException {
         this.repositorio = Objects.requireNonNull(repositorio);
         this.turnos = Objects.requireNonNull(turnos);
-        for (Cliente cliente : repositorio.listar()) arbol.insertar(cliente);
+        recargarDesdePersistencia();
     }
 
     public Cliente registrar(int codigo, String nombre, String telefono) throws SQLException {
@@ -36,6 +36,17 @@ public final class ClienteService {
     }
 
     public List<Cliente> listar() { return arbol.inorden(); }
+
+    /**
+     * Reconstruye el BST desde la fuente persistente, incluidos los inactivos.
+     * Si falla la consulta o la construcción, conserva íntegro el árbol anterior.
+     * No escribe en SQLite y no sincroniza sesiones concurrentes automáticamente.
+     */
+    public void recargarDesdePersistencia() throws SQLException {
+        ArbolBST nuevo = new ArbolBST();
+        for (Cliente cliente : repositorio.listar()) nuevo.insertar(cliente);
+        arbol = nuevo;
+    }
 
     public Cliente actualizar(int codigo, String nombre, String telefono) throws SQLException {
         Cliente anterior = buscar(codigo);

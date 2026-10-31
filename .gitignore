@@ -1,0 +1,23 @@
+# Java y Maven
+/target/
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+
+# Preferencias personales de editores
+/.vscode/
+/.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Auxiliares SQLite. La base final turnos.db NO se ignora.
+*.db-journal
+*.db-wal
+*.db-shm

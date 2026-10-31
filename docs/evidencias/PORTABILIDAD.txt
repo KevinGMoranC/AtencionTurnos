@@ -1,0 +1,36 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< edu.oficina:atencion-turnos >---------------------
+[INFO] Building AtencionTurnos 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ atencion-turnos ---
+[INFO] skip non existing resourceDirectory C:\Users\kmdes\Documents\Codex\2026-10-20\sol\work\final_20261030\Prueba con espacios\AtencionTurnos\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ atencion-turnos ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 28 source files with javac [debug release 21] to target\classes
+[INFO] 
+[INFO] --- exec:3.5.0:java (default-cli) @ atencion-turnos ---
+
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Datos conservados. Hasta luego.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.689 s
+[INFO] Finished at: 2026-10-30T17:32:30-06:00
+[INFO] ------------------------------------------------------------------------
+Acceso denegado.

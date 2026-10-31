@@ -1,0 +1,13 @@
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Datos conservados. Hasta luego.

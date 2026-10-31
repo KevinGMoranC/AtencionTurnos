@@ -1,0 +1,174 @@
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: CLIENTES: 1 Registrar | 2 Listar | 3 Buscar | 4 Actualizar nombre y teléfono | 5 Cambiar estado | 0 Volver
+Opción de clientes: Código: 1003 | María García | 55501003 | Activo
+CLIENTES: 1 Registrar | 2 Listar | 3 Buscar | 4 Actualizar nombre y teléfono | 5 Cambiar estado | 0 Volver
+Opción de clientes: 
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Código del cliente: Código del servicio: Turno generado: 1
+
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Código del cliente: Código del servicio: Turno generado: 2
+
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Código del cliente: Código del servicio: Turno generado: 3
+
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Código del cliente: Código del servicio: Turno generado: 4
+
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Código del cliente: Código del servicio: Turno generado: 5
+
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Código del cliente: Código del servicio: Operación no completada: El cliente ya tiene un turno pendiente.
+
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Número de turno: Turno 3 cancelado.
+
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Siguiente turno a atender:
+Turno 1 | Cliente 1001: Ana López | Servicio 1: Información | PENDIENTE | Generado: 2026-10-30T17:25:52.522109600 | Finalizado: -
+Turno 1 atendido.
+
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Siguiente turno a atender:
+Turno 2 | Cliente 1002: Carlos Pérez | Servicio 2: Entrega de documentos | PENDIENTE | Generado: 2026-10-30T17:25:52.539110900 | Finalizado: -
+Turno 2 atendido.
+
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Turno 4 | Cliente 1004: José Hernández | Servicio 3: Actualización de datos | PENDIENTE | Generado: 2026-10-30T17:25:52.555108300 | Finalizado: -
+Turno 5 | Cliente 1005: Luisa Morales | Servicio 2: Entrega de documentos | PENDIENTE | Generado: 2026-10-30T17:25:52.563108300 | Finalizado: -
+
+ATENCION TURNOS — OFICINA DE SERVICIOS
+1. Gestión de clientes
+2. Gestión de servicios
+3. Generar turno
+4. Atender siguiente turno
+5. Cancelar turno
+6. Turnos pendientes
+7. Turnos atendidos
+8. Turnos cancelados
+9. Historial de un cliente
+10. Resumen por servicio
+11. Salir
+Opción: Datos conservados. Hasta luego.

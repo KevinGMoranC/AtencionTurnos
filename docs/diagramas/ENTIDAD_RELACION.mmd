@@ -1,0 +1,22 @@
+erDiagram
+  CLIENTES ||--o{ TURNOS : solicita
+  SERVICIOS ||--o{ TURNOS : corresponde
+  CLIENTES {
+    INTEGER codigo PK
+    TEXT nombre_completo
+    TEXT telefono
+    INTEGER activo
+  }
+  SERVICIOS {
+    INTEGER codigo PK
+    TEXT nombre
+    INTEGER activo
+  }
+  TURNOS {
+    INTEGER numero PK "AUTOINCREMENT"
+    INTEGER codigo_cliente FK
+    INTEGER codigo_servicio FK
+    TEXT fecha_generacion
+    TEXT estado
+    TEXT fecha_finalizacion "NULL solo si PENDIENTE"
+  }

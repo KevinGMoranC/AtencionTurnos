@@ -1,0 +1,193 @@
+{
+  "base": "Días 1–4 confirmados sin cambios adicionales por el grupo",
+  "fecha": "2026-10-30",
+  "pruebas": "21/21; demostración en dos procesos y script SQL verificados",
+  "nota": "No se ha integrado GitHub. Se excluye el hash de este manifiesto para evitar autorreferencia.",
+  "archivos": {
+    "src/test/java/edu/oficina/pruebas/ValidacionFinalClientes.java": {
+      "responsable": 1,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "e1d571f1b3cee476f86074440d0fd88978d82da0ac53b399e07e29926cca0c45"
+    },
+    "src/test/java/edu/oficina/pruebas/ValidacionFinalTurnos.java": {
+      "responsable": 2,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "104e36d679cd886f270c2771bd3a772352ad3d9474538e4bc22fb5cdab3f32b5"
+    },
+    "src/test/java/edu/oficina/pruebas/PruebasFinales.java": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "42990ae4f7a5bfefd49398e3700e1e6a216e1b49df57b3cd9d054ab84725fd4c"
+    },
+    "pom.xml": {
+      "responsable": 3,
+      "cambio": "modificado",
+      "sha256_base": "44f67a4caff0966d59f32c112688e2ee7142e001f9974835998dc05c270e595a",
+      "sha256_entrega": "83e5f4fbda95bbbc4d3d84bae92cd2d583c431a8c326919e852c37072d29dbd6"
+    },
+    "ejecutar.ps1": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "95756c181381f3bb70208378a673ce7690fa5f795e8040fbe87ff8f20b428513"
+    },
+    "verificar.ps1": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "8e2b38302d1427879655863d26abbbe28c55fc633556694cb88d4a3eba022143"
+    },
+    ".vscode/launch.json": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "cd9bb8adb99ef4e5ded7c2f4bc7b8a275fae42ef2385b11b05e0a1e8b153cf10"
+    },
+    ".gitignore": {
+      "responsable": 3,
+      "cambio": "modificado",
+      "sha256_base": "023bdd99497194b7ada0eb4e3ae714b4fb54d8bbc9d4425cbc26e4c9fad70d41",
+      "sha256_entrega": "ce64abae9845f8406eaa596ea78ad3bfa241e34c329de892b7a5f26dead18542"
+    },
+    "docs/diagramas/UML_CLIENTES.mmd": {
+      "responsable": 1,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "6d5d27db73e29d14408ec6d6d5986f709dd651399c1eaaf353a90683a42e810f"
+    },
+    "docs/diagramas/UML_TURNOS.mmd": {
+      "responsable": 2,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "242a8aa3d7451c81cca7b3ea28dd49d29f37b0ee8c04ca1f908149f422d5380a"
+    },
+    "docs/diagramas/UML_GENERAL.mmd": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "38f5eff062050a0bbfb18a70d1f91ca43a7d156bbed733de3a8a68771533bb5e"
+    },
+    "docs/diagramas/ENTIDAD_RELACION.mmd": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "4fafda49322a4dbebb1d92a419f5e6a9b6e161d5dfbd1718c206374d4469f9af"
+    },
+    "docs/DIAGRAMAS.md": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "9e640ae99221080a00e6dd43bf469b203fe1f2ac514ecc956d6440771bd7ec5b"
+    },
+    "data/turnos.db": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "d0f6563d629719dd2bf6a92d09c8fc96b3c3e35c5c12172ddcac10c56891d4d6"
+    },
+    "docs/evidencias/01_turnos_y_cancelacion.png": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "f696c12c16b3d0dbdba3ce5c1865ab59ad23d140153e9170b5c2b97707dec934"
+    },
+    "docs/evidencias/02_reinicio_historial_resumen.png": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "482abfeeea86d8f84566da7ae8d0d117416b53f3371100be48f698262fa226c9"
+    },
+    "docs/evidencias/00_base_inicial.txt": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "53ba5c2bad36f4b422cdcb61f1a60a5fa8d4ff1f4bd5916ade665d8a3f65d91f"
+    },
+    "docs/evidencias/01_demostracion_antes_reinicio.txt": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "fd25ed1d4c78e1b0b45050e77465eee8a32943a39b4d4c3c732f15acb50adb2f"
+    },
+    "docs/evidencias/02_demostracion_despues_reinicio.txt": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "5a5e58a41c8e838c753269fa5349a30521b0a7a7d934b20666845ed561fd5bb7"
+    },
+    "docs/evidencias/PRUEBAS_FINALES.txt": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "ea10bd61de23b6122985aa5d8bc693510b1d3827afe89591621078c27add4552"
+    },
+    "README.md": {
+      "responsable": 3,
+      "cambio": "modificado",
+      "sha256_base": "25e58698a01425ad3a0521de5b4aaf306a66ae7cad7ebbb10eeffe3cfa562134",
+      "sha256_entrega": "602c83193c8626119a74b0b6fdb301de1765c7e922ac3adcf821630e1acd38c9"
+    },
+    "docs/REPORTE_PRUEBAS.md": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "a75055477652e12047e8ca1740f2041c97fa0c057f22af474ac4840ba66d2541"
+    },
+    "docs/CUMPLIMIENTO.md": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "ea6b6c7cdd5efee66e57b59c8eb84b19ef73362ff69dfc0ab7585dccb921b3b5"
+    },
+    "docs/DEMOSTRACION.md": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "abb969b6a9af0c2744c7b269664062e011497a8d7a0b289f880f876999b8c3a7"
+    },
+    "GUIA_INTEGRACION_FINAL.md": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "870aec57c8b62cd36d5b9b5d551ad04d336ba629901f3c2dc20accba395673f1"
+    },
+    "docs/final/INTEGRANTE_1.md": {
+      "responsable": 1,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "3a3ba95feb2616b0d98e4aa901b134c204e84640f28ab2caf5cae58c9e01969b"
+    },
+    "docs/final/INTEGRANTE_2.md": {
+      "responsable": 2,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "15138cb5c3aeb86cd18c5784fe3880d0366e7db9b0a96c5a799b4e2b3ad44eaa"
+    },
+    "docs/final/INTEGRANTE_3.md": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "3ce3387ab2387d6104d622d73f95abe86bd174bf3e4e94127dc48637b03add62"
+    },
+    "docs/evidencias/PORTABILIDAD.txt": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "22414797de34e15e27243c7c3ea86d6e8978a87bc4a94c53f1b4464f0ad99469"
+    },
+    "docs/final/MANIFIESTO_FINAL.json": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null
+    },
+    "LISTA_ARCHIVOS.md": {
+      "responsable": 3,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "e7a1ba7b24a6e05c0da3ddb69b30a3f5f154648eba9ba45a42f77a4c00c2c2d5"
+    }
+  }
+}

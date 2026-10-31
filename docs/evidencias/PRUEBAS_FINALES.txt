@@ -1,0 +1,348 @@
+Acceso denegado.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< edu.oficina:atencion-turnos >---------------------
+[INFO] Building AtencionTurnos 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ atencion-turnos ---
+[INFO] skip non existing resourceDirectory C:\Users\kmdes\Documents\Codex\2026-10-20\sol\work\final_20261030\comprobacion\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ atencion-turnos ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 28 source files with javac [debug release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ atencion-turnos ---
+[INFO] skip non existing resourceDirectory C:\Users\kmdes\Documents\Codex\2026-10-20\sol\work\final_20261030\comprobacion\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ atencion-turnos ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 23 source files with javac [debug release 21] to target\test-classes
+[INFO] 
+[INFO] --- exec:3.5.0:java (default-cli) @ atencion-turnos ---
+=== PruebaBST ===
+BST: inserci�n, b�squeda, orden, actualizaci�n y duplicados correctos.
+=== PruebaClientes ===
+OK: Carga del BST desde SQLite
+OK: Tel�fono conserva ceros iniciales
+OK rechazo: C�digo duplicado
+OK rechazo: C�digo no positivo
+OK rechazo: Nombre vac�o
+OK rechazo: Tel�fono inv�lido
+OK rechazo: C�digo inexistente
+OK: Actualizaci�n persistente
+OK: Inactivo permanece en el BST
+OK rechazo: Desactivar cliente con pendiente
+OK: BST conserva estado ante rechazo
+OK rechazo: Fallo real de escritura
+OK: BST intacto ante fallo de SQLite
+OK rechazo: Fallo al registrar
+OK rechazo: No aparece cliente no guardado
+OK: Reinicio no repone ni duplica datos iniciales
+PRUEBA CLIENTES CORRECTA
+=== PruebaCola ===
+Cola: FIFO, cancelaciones de extremos y medio, y pendiente �nico correctos.
+=== PruebaTurnos ===
+OK: Atenci�n de cola vac�a
+OK: N�mero autom�tico 1
+OK: N�mero autom�tico 2
+OK: N�mero autom�tico 3
+OK: N�mero autom�tico 4
+OK: N�mero autom�tico 5
+OK rechazo: Dos pendientes por cliente
+OK: Estado y fecha de cancelaci�n
+OK: Cancelaci�n conserva orden
+OK: Atenci�n FIFO y fecha
+OK: Segundo atendido
+OK: Reconstrucci�n de pendientes al reiniciar
+OK: FIFO despu�s de reinicio
+OK: Sin pendientes restantes
+OK rechazo: Cancelar atendido
+OK rechazo: Repetir cancelaci�n
+OK rechazo: DAO tampoco reactiva cancelado
+OK: Estados persistidos de la secuencia
+OK: Numeraci�n no reutilizada
+OK rechazo: Fallo al atender
+OK rechazo: Fallo al cancelar
+OK: Cola y base intactas ante errores
+OK rechazo: Fallo al generar
+OK: No se encola lo que no se guard�
+OK rechazo: Cliente inactivo
+OK rechazo: Servicio inactivo
+OK rechazo: Cliente no registrado
+OK rechazo: Servicio no registrado
+PRUEBA TURNOS CORRECTA
+=== PruebaServicios ===
+OK: Registro y listado de servicios
+OK rechazo: C�digo duplicado
+OK rechazo: C�digo negativo
+OK rechazo: Nombre vac�o
+OK rechazo: Servicio inexistente
+OK: Actualizaci�n y desactivaci�n
+OK rechazo: Servicio con pendiente
+OK: Se conserva activo ante rechazo
+OK rechazo: Fallo de actualizaci�n
+OK: Nombre persistente intacto
+PRUEBA SERVICIOS CORRECTA
+=== PruebaPersistencia ===
+OK: Claves for�neas habilitadas
+OK: Cinco clientes, tres servicios y cero turnos
+OK: Datos iniciales exactos
+OK: Inicializaci�n idempotente
+OK: Reinicio no restablece datos editados
+OK rechazo: Un pendiente tambi�n en persistencia
+OK rechazo: Trigger impide desactivar cliente con pendiente
+OK rechazo: Trigger impide desactivar servicio con pendiente
+OK rechazo: Relaci�n protege el historial
+OK: Se conserva turno finalizado
+OK: Nuevo turno despu�s de finalizar
+PRUEBA PERSISTENCIA CORRECTA
+=== PruebaIntegracionClientesDia3 ===
+OK: Registro real y par�metros SQL con ap�strofo
+OK rechazo: ClienteService ve pendientes creados por TurnoService
+OK: Base y BST conservan estado ante rechazo
+OK: Desactivaci�n permitida despu�s de cancelar
+OK: Reconstrucci�n del BST conserva datos y cliente inactivo
+OK: Inorden completo despu�s de reiniciar
+OK: El cliente inactivo conserva historial
+OK: Cliente reactivado puede solicitar otro turno
+INTEGRACION CLIENTES DIA 3 CORRECTA
+=== PruebaIntegracionTurnosDia3 ===
+OK rechazo: Turnos rechaza servicio desactivado por ServicioService
+OK rechazo: Turnos rechaza cliente desactivado por ClienteService
+OK: Primer n�mero persistido tras rechazos de validaci�n
+OK: Numeraci�n siguiente
+OK rechazo: Un solo pendiente entre servicios distintos
+OK rechazo: Servicio con pendiente no se desactiva
+OK rechazo: Cliente con pendiente no se desactiva
+OK: Reconstrucci�n ordenada desde SQLite
+OK: FIFO y fecha de atenci�n
+OK: Cancelaci�n y fecha persistida
+OK: No reutiliza n�meros de atendidos o cancelados
+OK: Solo se reconstruye el pendiente vigente
+OK: Las consultas nuevas conservan el estado de cada turno
+INTEGRACION TURNOS DIA 3 CORRECTA
+=== PruebaConsultasDia3 ===
+OK: Todos los servicios aparecen inicialmente en cero
+OK: Consulta de atendidos ordenada
+OK: Consulta de cancelados
+OK: Historial de Mar�a Garc�a incluye turno cancelado
+OK: Historial filtra por cliente
+OK rechazo: Historial de cliente inexistente
+OK: B�squeda de turno inexistente
+OK: Resumen exacto del enunciado
+OK: Servicio inactivo sin turnos aparece en cero
+OK: Total sin duplicaci�n por joins
+CONSULTAS DIA 3 CORRECTAS
+=== PruebaMenuDia3 ===
+OK: Men� registra, actualiza y cambia estado del cliente
+OK: Men� actualiza servicio y rechaza desactivaci�n con pendiente
+OK: El men� presenta los rechazos de ambos m�dulos
+OK: Resumen visible despu�s de cancelar
+OK: Atenci�n y consultas desde el men�
+OK: La atenci�n muestra n�mero, nombre del cliente y servicio
+OK: Cola vac�a y salida normal
+OK: No quedan pendientes despu�s del recorrido
+OK: Opciones y n�meros inv�lidos permiten continuar
+OK: Validaciones de campos visibles
+OK: C�digo inexistente y estado/turno inv�lidos
+OK: Los intentos inv�lidos no crean registros
+OK: Fin de entrada sin bucle infinito
+OK: El men� informa un fallo de SQLite y contin�a mostrando el pendiente
+OK: No se pierde el turno ante el fallo desde el men�
+MENU DIA 3 CORRECTO
+=== PruebaLimitesBSTDia4 ===
+OK: �rbol vac�o admite b�squeda y recorrido
+OK: Intentos inv�lidos no cambian un �rbol vac�o
+OK: Inorden correcto para 256 claves, semilla 7
+OK: B�squeda inexistente devuelve null en la estructura
+OK: Se actualiza y conserva la clave 150
+OK: Se actualiza y conserva la clave 1
+OK: Se actualiza y conserva la clave 128
+OK: Se actualiza y conserva la clave 2147483647
+OK: Duplicados, actualizaci�n inv�lida y listas externas no alteran el BST
+OK: Inorden correcto para 256 claves, semilla 19
+OK: B�squeda inexistente devuelve null en la estructura
+OK: Se actualiza y conserva la clave 27
+OK: Se actualiza y conserva la clave 1
+OK: Se actualiza y conserva la clave 128
+OK: Se actualiza y conserva la clave 2147483647
+OK: Duplicados, actualizaci�n inv�lida y listas externas no alteran el BST
+OK: Inorden correcto para 256 claves, semilla 42
+OK: B�squeda inexistente devuelve null en la estructura
+OK: Se actualiza y conserva la clave 96
+OK: Se actualiza y conserva la clave 1
+OK: Se actualiza y conserva la clave 128
+OK: Se actualiza y conserva la clave 2147483647
+OK: Duplicados, actualizaci�n inv�lida y listas externas no alteran el BST
+OK: Orden correcto en �rbol sesgado
+OK: Orden correcto en �rbol sesgado
+LIMITES BST DIA 4 CORRECTOS
+=== PruebaClientesDia4 ===
+OK: C�digo positivo m�nimo/m�ximo y nombre con acento/ap�strofo
+OK rechazo: C�digo no positivo 0
+OK rechazo: C�digo no positivo -1
+OK rechazo: C�digo no positivo -2147483648
+OK rechazo: Nombre null
+OK rechazo: Nombre en blanco
+OK rechazo: Tel�fono inv�lido: null
+OK rechazo: Tel�fono inv�lido: 
+OK rechazo: Tel�fono inv�lido: 1234567
+OK rechazo: Tel�fono inv�lido: 123456789
+OK rechazo: Tel�fono inv�lido: 12A45678
+OK rechazo: Tel�fono inv�lido: +1234567
+OK rechazo: Tel�fono inv�lido: ????????
+OK rechazo: Tel�fono inv�lido: ????????
+OK rechazo: Tel�fono inv�lido: 1234 678
+OK: Los registros inv�lidos no llegan a SQLite
+OK rechazo: Un c�digo inactivo sigue siendo �nico
+OK: Actualizar datos no reactiva al cliente
+OK rechazo: Pendiente impide desactivar pero permite editar datos
+OK: Desactivaci�n permitida tras cancelar
+OK: Desactivaci�n permitida tras atender
+OK rechazo: Fallo real de guardado al cambiar estado
+OK: Estado anterior �ntegro en BST y SQLite ante fallo
+OK rechazo: Actualizar inexistente
+OK rechazo: Cambiar estado de inexistente
+OK rechazo: Buscar c�digo no positivo
+OK: La lista entregada al llamador no es la estructura ni elimina registros
+CLIENTES DIA 4 CORRECTOS
+=== PruebaRecargaClientesDia4 ===
+OK: El �rbol es una instant�nea hasta recargar
+OK: Recarga adopta la fuente persistente, incluidos inactivos y altas
+OK: Fallo de consulta conserva todo el �rbol anterior
+OK rechazo: Fallo durante la construcci�n del nuevo BST
+OK: No se publica un �rbol construido a medias
+OK rechazo: No queda visible el primer nodo de la carga fallida
+OK: Un repositorio vac�o produce un �rbol vac�o
+OK: Recargar nunca borra ni escribe los clientes de SQLite
+OK: Recargas repetidas no acumulan ni duplican nodos
+OK: Constructor y recarga expl�cita comparten la misma reconstrucci�n
+RECARGA CLIENTES DIA 4 CORRECTA
+=== PruebaLimitesColaDia4 ===
+LIMITES COLA DIA 4 CORRECTOS: 1920 operaciones deterministas y casos l�mite.
+=== PruebaTurnosDia4 ===
+OK: Cancelar primero, �ltimo e intermedio conserva el orden
+OK: Atenci�n despu�s de cancelaciones
+OK: Cancelaci�n del �nico pendiente deja extremos vac�os
+OK rechazo: Cancelar dos veces
+OK rechazo: Cancelar atendido
+OK rechazo: N�mero no positivo
+OK rechazo: C�digo de cliente no positivo
+OK rechazo: C�digo de servicio no positivo
+OK: Volver a encolar sin reutilizar n�meros
+OK rechazo: Fallo al atender
+OK rechazo: Fallo al cancelar
+OK: Ni estado, fecha ni cola cambian si SQLite rechaza el cierre
+OK rechazo: Fallo al crear no publica un pendiente
+OK: Cola vac�a despu�s del fallo de creaci�n
+OK: Los turnos persistidos mantienen numeraci�n sin reutilizaci�n
+TURNOS DIA 4 CORRECTOS
+=== PruebaRecargaTurnosDia4 ===
+OK: Recarga desde base omite finalizados e incorpora nuevos pendientes
+OK: FIFO reconstruido desde SQLite
+OK: Error de consulta conserva la cola anterior
+OK rechazo: Duplicado detectado durante reconstrucci�n
+OK: No se publica una cola construida a medias
+OK rechazo: La recarga rechaza un turno finalizado
+OK: Se conserva pendiente ante dato inv�lido
+OK: Recargas repetidas no duplican nodos
+OK: Recarga vac�a no borra historial persistido
+RECARGA TURNOS DIA 4 CORRECTA
+=== PruebaServiciosDia4 ===
+OK: El nombre con texto SQL es un dato, no una instrucci�n
+OK rechazo: C�digo de servicio no positivo
+OK rechazo: C�digo de servicio no positivo
+OK rechazo: C�digo de servicio no positivo
+OK rechazo: Nombre null
+OK rechazo: Nombre en blanco
+OK rechazo: C�digo inactivo sigue siendo �nico
+OK: Actualizar nombre no reactiva el servicio
+OK rechazo: No se desactiva con un pendiente real
+OK: Desactivaci�n permitida despu�s de cancelar
+OK rechazo: Fallo de guardado del estado
+OK rechazo: Fallo de guardado del nombre
+OK: SQLite conserva nombre y estado anteriores al fallo
+OK rechazo: Actualizar inexistente
+OK rechazo: Activar inexistente
+OK: Modificar la lista de resultados no elimina servicios
+OK: Consulta conserva servicio sin turnos en cero
+SERVICIOS DIA 4 CORRECTOS
+=== PruebaPersistenciaDia4 ===
+OK: Relaci�n de turnos a una entidad v�lida
+OK: Relaci�n de turnos a una entidad v�lida
+OK: Dos claves for�neas en turnos
+OK: Cada conexi�n mantiene claves for�neas habilitadas
+OK: Carga inicial exacta sin turnos
+OK: Nuevos DAO y servicio recuperan edici�n e inactivo despu�s de cerrar conexiones
+OK: Se recuperan pendientes en su orden desde SQLite
+OK: No se borran historiales ni se duplican datos iniciales
+OK rechazo: Fallo real durante la carga inicial
+OK: Rollback revierte esquema y datos parciales y no marca inicializaci�n completa
+OK: Reintento v�lido carga una vez despu�s del fallo
+PERSISTENCIA DIA 4 CORRECTA
+=== PruebaRecursosJdbcDia4 ===
+OK rechazo: Excepci�n de inserci�n cierra sus recursos
+OK rechazo: Validaci�n dentro de transacci�n cierra recursos
+OK rechazo: Rollback tras SQLException tambi�n libera recursos
+OK: Connection: abiertos=22, cerrados=22
+OK: Statement/PreparedStatement: abiertos=32, cerrados=32
+OK: ResultSet: abiertos=23, cerrados=23
+OK: Se observaron PreparedStatement en operaciones reales
+RECURSOS JDBC DIA 4 CORRECTOS
+=== ValidacionFinalClientes ===
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK rechazo: Pendiente no altera el invariante al rechazar desactivaci�n
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK rechazo: Escritura fallida
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Todos los campos y el orden del BST coinciden con SQLite
+OK: Cliente inactivo permanece con su historial
+VALIDACION FINAL CLIENTES CORRECTA
+=== ValidacionFinalTurnos ===
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: Cliente finalizado solicita nuevo turno sin reutilizar n�mero
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK rechazo: Atenci�n fallida no desincroniza
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: FIFO despu�s de reconstruir
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: �ltimo turno FIFO
+OK: Campos y orden de cola coinciden con los pendientes de SQLite
+OK: Cola vac�a e historial �ntegro
+OK: No se elimina historial al cerrar turnos
+VALIDACION FINAL TURNOS CORRECTA
+RESULTADO FINAL: 21/21 programas de prueba correctos.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.551 s
+[INFO] Finished at: 2026-10-30T17:23:56-06:00
+[INFO] ------------------------------------------------------------------------

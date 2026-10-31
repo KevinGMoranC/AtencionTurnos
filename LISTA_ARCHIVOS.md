@@ -1,0 +1,115 @@
+# Lista de archivos finales
+
+Inventario relativo de Proyecto_Final_Integrado. No incluye target, .git ni archivos de demostración.
+Los archivos históricos de docs/dia2 a dia4 se conservan; README y docs/final son la referencia vigente.
+
+| Archivo | Origen |
+|---|---|
+| `.gitignore` | Cierre: integrante 3 (modificado) |
+| `.vscode/launch.json` | Cierre: integrante 3 (nuevo) |
+| `GUIA_INTEGRACION_FINAL.md` | Cierre: integrante 3 (nuevo) |
+| `LISTA_ARCHIVOS.md` | Cierre: integrante 3 (nuevo) |
+| `README.md` | Cierre: integrante 3 (modificado) |
+| `data/turnos.db` | Cierre: integrante 3 (nuevo) |
+| `docs/CUMPLIMIENTO.md` | Cierre: integrante 3 (nuevo) |
+| `docs/DEMOSTRACION.md` | Cierre: integrante 3 (nuevo) |
+| `docs/DIAGRAMAS.md` | Cierre: integrante 3 (nuevo) |
+| `docs/REPORTE_PRUEBAS.md` | Cierre: integrante 3 (nuevo) |
+| `docs/dia2/INTEGRANTE_1.md` | Conservado de días 1–4 |
+| `docs/dia2/INTEGRANTE_2.md` | Conservado de días 1–4 |
+| `docs/dia2/INTEGRANTE_3.md` | Conservado de días 1–4 |
+| `docs/dia3/COORDINACION.md` | Conservado de días 1–4 |
+| `docs/dia3/INTEGRANTE_1.md` | Conservado de días 1–4 |
+| `docs/dia3/INTEGRANTE_2.md` | Conservado de días 1–4 |
+| `docs/dia3/INTEGRANTE_3.md` | Conservado de días 1–4 |
+| `docs/dia4/INTEGRANTE_1.md` | Conservado de días 1–4 |
+| `docs/dia4/INTEGRANTE_2.md` | Conservado de días 1–4 |
+| `docs/dia4/INTEGRANTE_3.md` | Conservado de días 1–4 |
+| `docs/dia4/MANIFIESTO.json` | Conservado de días 1–4 |
+| `docs/dia4/MANIFIESTO_2.json` | Conservado de días 1–4 |
+| `docs/dia4/MANIFIESTO_3.json` | Conservado de días 1–4 |
+| `docs/dia4/VERIFICACION_EQUIPO.md` | Conservado de días 1–4 |
+| `docs/dia4/resultados/Main_equipo_proceso_1.txt` | Conservado de días 1–4 |
+| `docs/dia4/resultados/Main_equipo_proceso_2.txt` | Conservado de días 1–4 |
+| `docs/dia4/resultados/PruebaClientesDia4.txt` | Conservado de días 1–4 |
+| `docs/dia4/resultados/PruebaLimitesBSTDia4.txt` | Conservado de días 1–4 |
+| `docs/dia4/resultados/PruebaLimitesColaDia4.txt` | Conservado de días 1–4 |
+| `docs/dia4/resultados/PruebaPersistenciaDia4.txt` | Conservado de días 1–4 |
+| `docs/dia4/resultados/PruebaRecargaClientesDia4.txt` | Conservado de días 1–4 |
+| `docs/dia4/resultados/PruebaRecargaTurnosDia4.txt` | Conservado de días 1–4 |
+| `docs/dia4/resultados/PruebaRecursosJdbcDia4.txt` | Conservado de días 1–4 |
+| `docs/dia4/resultados/PruebaServiciosDia4.txt` | Conservado de días 1–4 |
+| `docs/dia4/resultados/PruebaTurnosDia4.txt` | Conservado de días 1–4 |
+| `docs/diagramas/ENTIDAD_RELACION.mmd` | Cierre: integrante 3 (nuevo) |
+| `docs/diagramas/UML_CLIENTES.mmd` | Cierre: integrante 1 (nuevo) |
+| `docs/diagramas/UML_GENERAL.mmd` | Cierre: integrante 3 (nuevo) |
+| `docs/diagramas/UML_TURNOS.mmd` | Cierre: integrante 2 (nuevo) |
+| `docs/evidencias/00_base_inicial.txt` | Cierre: integrante 3 (nuevo) |
+| `docs/evidencias/01_demostracion_antes_reinicio.txt` | Cierre: integrante 3 (nuevo) |
+| `docs/evidencias/01_turnos_y_cancelacion.png` | Cierre: integrante 3 (nuevo) |
+| `docs/evidencias/02_demostracion_despues_reinicio.txt` | Cierre: integrante 3 (nuevo) |
+| `docs/evidencias/02_reinicio_historial_resumen.png` | Cierre: integrante 3 (nuevo) |
+| `docs/evidencias/PORTABILIDAD.txt` | Cierre: integrante 3 (nuevo) |
+| `docs/evidencias/PRUEBAS_FINALES.txt` | Cierre: integrante 3 (nuevo) |
+| `docs/final/INTEGRANTE_1.md` | Cierre: integrante 1 (nuevo) |
+| `docs/final/INTEGRANTE_2.md` | Cierre: integrante 2 (nuevo) |
+| `docs/final/INTEGRANTE_3.md` | Cierre: integrante 3 (nuevo) |
+| `docs/final/MANIFIESTO_FINAL.json` | Cierre: integrante 3 (nuevo) |
+| `ejecutar.ps1` | Cierre: integrante 3 (nuevo) |
+| `pom.xml` | Cierre: integrante 3 (modificado) |
+| `sql/crear_y_cargar.sql` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/Main.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/controlador/ControladorConsola.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/dao/ClienteDAO.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/dao/ClienteRepositorio.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/dao/ConsultasTurnosRepositorio.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/dao/DaoBase.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/dao/ServicioDAO.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/dao/ServicioRepositorio.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/dao/TurnoDAO.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/dao/TurnoRepositorio.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/dao/package-info.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/estructuras/ArbolBST.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/estructuras/ColaTurnos.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/estructuras/NodoCliente.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/estructuras/NodoTurno.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/modelo/Cliente.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/modelo/Servicio.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/modelo/Turno.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/persistencia/ConexionBD.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/persistencia/InicializadorBD.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/persistencia/ProveedorConexion.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/reportes/ResumenServicio.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/reportes/package-info.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/servicios/ClienteService.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/servicios/ConsultaService.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/servicios/ServicioService.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/servicios/TurnoService.java` | Conservado de días 1–4 |
+| `src/main/java/edu/oficina/vista/VistaConsola.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PreparacionPruebas.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaBST.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaClientes.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaClientesDia4.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaCola.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaConsultasDia3.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaIntegracionClientesDia3.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaIntegracionTurnosDia3.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaLimitesBSTDia4.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaLimitesColaDia4.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaMenuDia3.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaPersistencia.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaPersistenciaDia4.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaRecargaClientesDia4.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaRecargaTurnosDia4.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaRecursosJdbcDia4.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaServicios.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaServiciosDia4.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaTurnos.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebaTurnosDia4.java` | Conservado de días 1–4 |
+| `src/test/java/edu/oficina/pruebas/PruebasFinales.java` | Cierre: integrante 3 (nuevo) |
+| `src/test/java/edu/oficina/pruebas/ValidacionFinalClientes.java` | Cierre: integrante 1 (nuevo) |
+| `src/test/java/edu/oficina/pruebas/ValidacionFinalTurnos.java` | Cierre: integrante 2 (nuevo) |
+| `verificar.ps1` | Cierre: integrante 3 (nuevo) |
+
+La base data/turnos.db se entrega con 5 clientes, 3 servicios y 0 turnos.
+El manifiesto de diferencias está en docs/final/MANIFIESTO_FINAL.json.

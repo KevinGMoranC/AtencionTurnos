@@ -6,7 +6,8 @@ hs_err_pid*
 replay_pid*
 
 # Preferencias personales de editores
-/.vscode/
+/.vscode/*
+!/.vscode/launch.json
 /.idea/
 *.iml
 .classpath

@@ -1,0 +1,11 @@
+OK: El árbol es una instantánea hasta recargar
+OK: Recarga adopta la fuente persistente, incluidos inactivos y altas
+OK: Fallo de consulta conserva todo el árbol anterior
+OK rechazo: Fallo durante la construcción del nuevo BST
+OK: No se publica un árbol construido a medias
+OK rechazo: No queda visible el primer nodo de la carga fallida
+OK: Un repositorio vacío produce un árbol vacío
+OK: Recargar nunca borra ni escribe los clientes de SQLite
+OK: Recargas repetidas no acumulan ni duplican nodos
+OK: Constructor y recarga explícita comparten la misma reconstrucción
+RECARGA CLIENTES DIA 4 CORRECTA

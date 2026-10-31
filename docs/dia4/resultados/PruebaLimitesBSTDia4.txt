@@ -1,0 +1,26 @@
+OK: Árbol vacío admite búsqueda y recorrido
+OK: Intentos inválidos no cambian un árbol vacío
+OK: Inorden correcto para 256 claves, semilla 7
+OK: Búsqueda inexistente devuelve null en la estructura
+OK: Se actualiza y conserva la clave 150
+OK: Se actualiza y conserva la clave 1
+OK: Se actualiza y conserva la clave 128
+OK: Se actualiza y conserva la clave 2147483647
+OK: Duplicados, actualización inválida y listas externas no alteran el BST
+OK: Inorden correcto para 256 claves, semilla 19
+OK: Búsqueda inexistente devuelve null en la estructura
+OK: Se actualiza y conserva la clave 27
+OK: Se actualiza y conserva la clave 1
+OK: Se actualiza y conserva la clave 128
+OK: Se actualiza y conserva la clave 2147483647
+OK: Duplicados, actualización inválida y listas externas no alteran el BST
+OK: Inorden correcto para 256 claves, semilla 42
+OK: Búsqueda inexistente devuelve null en la estructura
+OK: Se actualiza y conserva la clave 96
+OK: Se actualiza y conserva la clave 1
+OK: Se actualiza y conserva la clave 128
+OK: Se actualiza y conserva la clave 2147483647
+OK: Duplicados, actualización inválida y listas externas no alteran el BST
+OK: Orden correcto en árbol sesgado
+OK: Orden correcto en árbol sesgado
+LIMITES BST DIA 4 CORRECTOS

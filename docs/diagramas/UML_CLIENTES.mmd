@@ -1,0 +1,44 @@
+classDiagram
+class Cliente {
+  -int codigo
+  -String nombreCompleto
+  -String telefono
+  -boolean activo
+  +getCodigo() int
+  +getNombreCompleto() String
+  +getTelefono() String
+  +isActivo() boolean
+}
+class NodoCliente {
+  -Cliente cliente
+  -NodoCliente izquierdo
+  -NodoCliente derecho
+}
+class ArbolBST {
+  -NodoCliente raiz
+  +insertar(Cliente cliente)
+  +buscar(int codigo) Cliente
+  +inorden() List~Cliente~
+  +actualizar(Cliente cliente)
+  +estaVacio() boolean
+}
+class ClienteService {
+  +registrar(int codigo, String nombre, String telefono) Cliente
+  +buscar(int codigo) Cliente
+  +listar() List~Cliente~
+  +actualizar(int codigo, String nombre, String telefono) Cliente
+  +cambiarEstado(int codigo, boolean activo) Cliente
+  +recargarDesdePersistencia()
+}
+class ClienteRepositorio {
+  <<interface>>
+  +listar() List~Cliente~
+  +buscar(int codigo) Cliente
+  +insertar(Cliente cliente)
+  +actualizar(Cliente cliente)
+}
+ArbolBST *-- NodoCliente : raiz y enlaces
+NodoCliente --> Cliente
+NodoCliente --> NodoCliente : izquierdo / derecho
+ClienteService *-- ArbolBST
+ClienteService --> ClienteRepositorio

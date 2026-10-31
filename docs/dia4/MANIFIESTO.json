@@ -1,0 +1,72 @@
+{
+  "responsable": 1,
+  "rama": "clientes-bst",
+  "base": "Días 1, 2 y 3 entregados en esta conversación",
+  "compilacion": "Java 21 y Maven: BUILD SUCCESS",
+  "pruebas": {
+    "PruebaBST": 0,
+    "PruebaClientes": 0,
+    "PruebaCola": 0,
+    "PruebaTurnos": 0,
+    "PruebaServicios": 0,
+    "PruebaPersistencia": 0,
+    "PruebaIntegracionClientesDia3": 0,
+    "PruebaIntegracionTurnosDia3": 0,
+    "PruebaConsultasDia3": 0,
+    "PruebaMenuDia3": 0,
+    "PruebaLimitesBSTDia4": 0,
+    "PruebaClientesDia4": 0,
+    "PruebaRecargaClientesDia4": 0
+  },
+  "archivos": {
+    "src/main/java/edu/oficina/servicios/ClienteService.java": {
+      "responsable": 1,
+      "cambio": "modificado",
+      "sha256_base": "fffea5cc6492760631a88b17899c3d12d2b83b72f3f5135a00a8204093dfe77b",
+      "sha256_entrega": "3791d9fc631bd2472e3be6253d580aa5706464147b45e6f2876dcb123d5ead2e"
+    },
+    "src/test/java/edu/oficina/pruebas/PruebaLimitesBSTDia4.java": {
+      "responsable": 1,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "10bd58873f092e73238a7bd2e601480dff3776049aae67bcf039349dc2f41ecd"
+    },
+    "src/test/java/edu/oficina/pruebas/PruebaClientesDia4.java": {
+      "responsable": 1,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "90e8237e11765fa67fabdba841dd662ff90e2d7ccd9b2490ae9cb2290b30a84a"
+    },
+    "src/test/java/edu/oficina/pruebas/PruebaRecargaClientesDia4.java": {
+      "responsable": 1,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "07f70c799724d562f54acf1c85a8a1440ec4f30f1ca25f61547126129b097b7d"
+    },
+    "docs/dia4/INTEGRANTE_1.md": {
+      "responsable": 1,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "6543344ee2fce51c5c0189aa6840338bbb7a4495e39ba7dfc8e33d9ff450d304"
+    },
+    "docs/dia4/resultados/PruebaLimitesBSTDia4.txt": {
+      "responsable": 1,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "eea7514afb15602b6cb60c5db42a35cecd2afcb608205cb6addb4c4472e71775"
+    },
+    "docs/dia4/resultados/PruebaClientesDia4.txt": {
+      "responsable": 1,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "745b2b75fe3aab0327f8602a0db59817f813170c9adbd1fc2000013d72256934"
+    },
+    "docs/dia4/resultados/PruebaRecargaClientesDia4.txt": {
+      "responsable": 1,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "31e0ac38d385e680837c1186043f4efdfda1aeddd5f25008c62129e3b8ec5c05"
+    }
+  },
+  "nota": "El manifiesto no se incluye en su propio inventario de hashes."
+}

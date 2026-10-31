@@ -1,0 +1,52 @@
+classDiagram
+class Turno {
+  -long numero
+  -int codigoCliente
+  -int codigoServicio
+  -LocalDateTime fechaGeneracion
+  -Estado estado
+  -LocalDateTime fechaFinalizacion
+}
+class EstadoTurno {
+  <<enumeration>>
+  PENDIENTE
+  ATENDIDO
+  CANCELADO
+}
+class NodoTurno {
+  -Turno turno
+  -NodoTurno siguiente
+}
+class ColaTurnos {
+  -NodoTurno primero
+  -NodoTurno ultimo
+  +encolar(Turno turno)
+  +consultarSiguiente() Turno
+  +desencolar() Turno
+  +cancelar(long numero) Turno
+  +listarPendientes() List~Turno~
+  +tienePendienteCliente(int codigo) boolean
+  +estaVacia() boolean
+}
+class TurnoService {
+  +generar(int cliente, int servicio) Turno
+  +consultarSiguiente() Turno
+  +listarPendientes() List~Turno~
+  +atenderSiguiente() Turno
+  +cancelar(long numero) Turno
+  +recargarDesdePersistencia()
+}
+class TurnoRepositorio {
+  <<interface>>
+  +listarPendientes() List~Turno~
+  +tienePendienteCliente(int codigo) boolean
+  +tienePendienteServicio(int codigo) boolean
+  +crearPendiente(int cliente, int servicio) Turno
+  +finalizar(long numero, Estado estado, LocalDateTime fecha) Turno
+}
+Turno --> EstadoTurno
+ColaTurnos *-- NodoTurno
+NodoTurno --> NodoTurno : siguiente
+NodoTurno --> Turno
+TurnoService *-- ColaTurnos
+TurnoService --> TurnoRepositorio

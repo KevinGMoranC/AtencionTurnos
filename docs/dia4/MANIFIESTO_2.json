@@ -1,0 +1,77 @@
+{
+  "responsable": 2,
+  "rama": "turnos-cola",
+  "base": "Días 1 a 3 locales confirmados por el grupo",
+  "archivos": {
+    "src/main/java/edu/oficina/servicios/TurnoService.java": {
+      "responsable": 2,
+      "cambio": "modificado",
+      "sha256_base": "caab8d8df5e2b80f1103b481bf95ece95d31441bcff17ae9a21d850e5801c247",
+      "sha256_entrega": "212150b12bca3c96d877e211f981d1377341eca7ace55999b906e2e3590ef412"
+    },
+    "src/test/java/edu/oficina/pruebas/PruebaLimitesColaDia4.java": {
+      "responsable": 2,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "82738ee45be5e3cb0e3d2ac6cb52e7e3e2e1649e29456ab7678d606547d32204"
+    },
+    "src/test/java/edu/oficina/pruebas/PruebaTurnosDia4.java": {
+      "responsable": 2,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "bffa2d4fbd84538b46c5da076aa190c28b55feb39e720fae680e6064a787a62e"
+    },
+    "src/test/java/edu/oficina/pruebas/PruebaRecargaTurnosDia4.java": {
+      "responsable": 2,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "f784d5e6bee55f94a1ae1b474da4d1ae9e65443c12e97fde43cf5859225a277e"
+    },
+    "docs/dia4/INTEGRANTE_2.md": {
+      "responsable": 2,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "9d72dea64603e1ab380e65cabca020ff0bf8bf82ea34e895aa830788c7f14411"
+    },
+    "docs/dia4/resultados/PruebaLimitesColaDia4.txt": {
+      "responsable": 2,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "ea07260461695b75308c861cb442ca095adde3d929bf007a7c78cb6736197085"
+    },
+    "docs/dia4/resultados/PruebaTurnosDia4.txt": {
+      "responsable": 2,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "1bb1bc3385581b54a07495f9737d1e55209943c6a1cdcc03f1992432c9058410"
+    },
+    "docs/dia4/resultados/PruebaRecargaTurnosDia4.txt": {
+      "responsable": 2,
+      "cambio": "nuevo",
+      "sha256_base": null,
+      "sha256_entrega": "1bae6bb93749a54a1e48be3d2b23428a84dc811beb589428987be1b1c09e2197"
+    }
+  },
+  "pruebas_equipo": {
+    "PruebaBST": 0,
+    "PruebaClientes": 0,
+    "PruebaCola": 0,
+    "PruebaTurnos": 0,
+    "PruebaServicios": 0,
+    "PruebaPersistencia": 0,
+    "PruebaIntegracionClientesDia3": 0,
+    "PruebaIntegracionTurnosDia3": 0,
+    "PruebaConsultasDia3": 0,
+    "PruebaMenuDia3": 0,
+    "PruebaLimitesBSTDia4": 0,
+    "PruebaClientesDia4": 0,
+    "PruebaRecargaClientesDia4": 0,
+    "PruebaLimitesColaDia4": 0,
+    "PruebaTurnosDia4": 0,
+    "PruebaRecargaTurnosDia4": 0,
+    "PruebaServiciosDia4": 0,
+    "PruebaPersistenciaDia4": 0,
+    "PruebaRecursosJdbcDia4": 0
+  },
+  "nota": "El manifiesto excluye su propio hash; la carpeta del integrante 1 se conserva íntegra."
+}
